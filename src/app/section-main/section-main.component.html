@@ -1,0 +1,25 @@
+<section class="section-main">
+    <app-header (onInvoke)="changeStateMenu()"></app-header>
+    <div class="container wrap-slider">
+    <div class="slider ">
+    <ngb-carousel [showNavigationArrows]="false" [interval]="0">
+        <ng-template ngbSlide>
+            <div>
+            <p class="text-slider">Создание <span>креативных сайтов </span> для предприимчивый людей </p>
+            <p class="description-slider">Создадим для вас сайт любой сложности и любого вкуса по крайне доступным ценам в Петрозаводске.</p>
+             <a class="btn-site" href="javascript:void(0)">Проекты</a>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <div>
+            <p class="text-slider">Создание <span>креативных сайтов </span> для предприимчивый людей <i class="bi bi-alarm"></i></p>
+            <p class="description-slider">Создадим для вас сайт любой сложности и любого вкуса по крайне доступным ценам в Петрозаводске.</p>
+             <a class="btn-site" href="javascript:void(0)">Проекты</a>
+            </div>
+        </ng-template>
+
+    </ngb-carousel>
+    </div>
+ </div>
+</section>

@@ -1,0 +1,35 @@
+@import '../../theme.scss';
+.section-main{
+    padding-top: 58px;
+    padding-bottom: 190px;
+    position: relative;
+    background-color: $grey;
+
+ 
+}
+.text-slider{
+    font-size: 32px;
+    margin-bottom: 46px;
+
+    font-family: "LatoLight";
+    color: #000000;
+    span{
+        color: #f06d6e;
+        font-family: "LatoBold";
+    }
+}
+.slider{
+    padding-top: 77px;
+    max-width: 410px;
+}
+.wrap-slider{
+    position: relative;
+}
+.carousel{
+    position: static;
+    
+}
+.description-slider{
+    margin-bottom: 48px;
+}
+

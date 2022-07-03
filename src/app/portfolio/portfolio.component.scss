@@ -1,0 +1,48 @@
+@import '../../theme.scss';
+.section-portfolio{
+    background-color: $grey;
+    padding-bottom: 78px;
+    .wrap-portfolio_title{
+        padding: 84px 0px;
+    }
+    .works-bold{
+        font-family: "LatoBold" ;
+    }
+    .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        border: 1px solid $orange;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .arrows-portfolio{
+        position: absolute;
+        right: 83px;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+    .arrow-right {
+        margin-left: 10px;
+    }
+    .title-works{
+        position: relative;
+    }
+    .arrow i{
+        font-size: 20px;
+    }
+   
+}
+.modalImagePortfolios{
+    object-fit: cover;
+}
+.i-close{
+    font-size: 30px;
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../theme.scss";
+.mobile-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $red;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    li{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px 15px;
+         &:not(:last-child){
+            border-bottom: 1px solid #ffffff;
+         }
+       
+    }
+    .close{
+        font-size: 20px;
+        color: #ffffff;
+        &:hover{
+           cursor: pointer;
+        }
+    }
+}
+

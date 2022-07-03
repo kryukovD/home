@@ -1,0 +1,50 @@
+<section class="section-portfolio">
+    <div class="section-portfolio_title">
+        <div class=" wrap-portfolio_title text-center">
+            <h1 class="title-works">Последние <span class="works-bold"> работы </span>
+            <div class="arrows-portfolio d-flex ">
+                <div class="arrow-left arrow" (click)="prev()" >
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+
+                <div class="arrow-right arrow" (click)="next()">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+        </h1>
+        </div>
+    </div>
+    <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" [interval]="0"  #carouselPortfolio>
+        <ng-template ngbSlide>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-flex flex-column">
+                        <img  src="/assets/images/portfolio/jungle-site.jpg"  data-url="https://kareliagroup.com" (click)="openModal(modalImages,$event)" >
+                     </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-flex flex-column">
+                        <p>Раздел пока пуст</p>
+                     </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</section>
+<ng-template #modalImages let-modal>
+    <div class="modal-header">
+        <h4 class="text-center" id="modal-basic-title">{{url}}</h4>
+        <i class="bi bi-x-lg i-close" (click)="modal.close()"></i>
+      </div>
+      <div class="modal-body">
+         <img src="{{clickedImage}}"   class="modalImagePortfolios">
+      </div>
+      <div class="modal-footer">
+        <a type="button" href="{{url}}" class="btn-site" >Перейти</a>
+      </div>
+</ng-template>

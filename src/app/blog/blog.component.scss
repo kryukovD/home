@@ -1,0 +1,48 @@
+@import "../../theme.scss";
+
+.section-blog{
+    padding: 84px 0px;
+    background: $default;
+    .wrap-image{
+        height: 212px;
+        width: 100%;
+        img{
+           width: 100%;
+           object-position: cover;
+        }
+    }
+  
+    .post{
+        position: relative;
+    }
+    .row-posts{
+        padding-top: 85px;
+    }
+    .author_post{
+        position: absolute;
+        top: 212px;
+        transform: translate(-50%,-50%);
+        width: 81px;
+        left: 50%;
+        height: 81px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .date-block{
+        padding-top: 66px;
+        text-align: center;
+        .date{
+            color: $red;
+            font-size: 14px;
+            
+        }
+    }
+    .description-block p{
+        padding-top: 20px;
+        font-size: 22px;
+        color: $previewPostColor;
+    }
+}

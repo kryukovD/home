@@ -1,0 +1,45 @@
+@import "../../theme.scss";
+.section-feature{
+    h1{
+        margin-bottom: 72px;
+    }
+    padding: 75px 0px;
+    background: $red;
+    .item{
+        border: 2px solid transparent; 
+    }
+     .btn-site:hover{
+      .item__content{
+          background: black;
+      }
+
+    }
+    .item__wrap-img{
+        width: 159px;
+        height: 159px;
+        background: #dd5e5f;
+        border-radius: 50%;
+        
+        i{
+            font-size:55px;
+            color: #ffffff;
+        }
+    }
+    .item__content{
+        color:#ffffff;
+        .title-content{
+            display: block;
+            color: #ffffff;
+            font-size: 22px;
+            margin: 35px 0px 32px;
+        }
+        .content__desc{
+            height: 63px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+    }
+}
+.active{
+    color: $orange !important ;
+}

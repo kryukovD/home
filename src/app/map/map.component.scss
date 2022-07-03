@@ -1,0 +1,75 @@
+@import "../../theme.scss";
+#map{
+    height: 700px;
+}
+.map-container{
+    position: relative;
+    h1{
+        padding-top: 60px;
+        margin-bottom: 30px;
+    }
+}
+.form-wrap{
+    padding: 0px 45px 32px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $red;
+    &::after{
+        content: "";
+        display: block;
+        height: 9px;
+        width: 88px;
+        background: $orange;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    .form-desc{
+        color: #ffffff;
+        font-size: 13px;
+        
+    }
+    .input-wrap {
+        input{
+            border: 1px solid rgba(255,255,255,0.6);
+            outline: none;
+            background: $red;
+            padding-left: 18px;
+            color: #ffffff;
+        }
+        textarea{
+            outline: none;
+            background: $red;
+            border: 1px solid rgba(255,255,255,0.6);
+            padding-left: 18px;
+            height: 122px;
+            color: #ffffff;
+        }
+        input:first-child{
+            margin-right: 8px;
+            margin-bottom: 17px;
+            height: 44px;
+        }
+        input:last-child{
+            margin-left: 8px;
+            margin-bottom: 17px;
+            height: 44px;
+        }
+    }
+    .send-form{
+        font-size: 45px;
+        color: #ffffff;
+        &:hover{
+            color: $orange;
+            cursor: pointer;
+        }
+        
+    }
+    .wrap-send-form{
+        padding-top: 25px;
+    }
+}
