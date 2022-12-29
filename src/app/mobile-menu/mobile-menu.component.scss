@@ -1,6 +1,6 @@
 @import "../../theme.scss";
 .mobile-menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -14,11 +14,22 @@
     li{
         display: flex;
         justify-content: space-between;
-        padding: 15px 15px 15px;
          &:not(:last-child){
             border-bottom: 1px solid #ffffff;
          }
+         a{
+            
+            display: flex;
+            padding: 15px 15px 15px;
+            flex-grow: 1;
+            justify-content: space-between;
+        
+         }
+        
        
+    }
+    .close_li a{
+        justify-content: flex-end;
     }
     .close{
         font-size: 20px;

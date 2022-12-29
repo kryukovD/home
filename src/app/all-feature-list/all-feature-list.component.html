@@ -1,0 +1,18 @@
+<section id="all_features" class="all_features_list">
+    <div class="container">
+         <h1 id="all_features_title"> Все технологии</h1>
+         <div class="row">
+            <div *ngFor="let item of sliceData" class="col-12 col-sm-6  col-md-3 item text-center mt-4 mt-md-0  ">
+                <div class="item__wrap-img d-flex justify-content-center align-items-center m-auto">
+                    <i class="{{item.class}}"></i>
+                </div>
+                <div class="item__content">
+                     <span class="title-content">{{item.title}}</span>
+                     <p class="content__desc">{{item.desc}}</p>
+                     <a class="btn-site" routerLink="/feature/{{item.id}}">Узнать больше</a>
+                </div>
+            </div>
+         </div>
+    </div>  
+    <ngb-pagination [collectionSize]="countItems" [pageSize]="pageSize" [size]="'sm'" (pageChange)="pageChanged($event)"></ngb-pagination>
+</section>

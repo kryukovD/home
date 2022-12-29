@@ -1,0 +1,32 @@
+@import '../../theme.scss';
+
+.all_article_list{
+    h1{
+        margin-bottom: 72px;
+    }
+    background: $red;
+    text-align: center;
+    padding: 75px 30px;
+   
+
+}
+.article{
+    display: flex;
+    &:hover{
+        cursor: pointer;
+    }
+    .article__desc{
+        text-align: left;
+        
+    }
+    .article__date{
+        display: flex;
+        align-items: flex-end;
+    }
+    .article__date span{
+        margin-bottom: 16px;
+        color: $orange;
+        margin-left: 10px;
+       
+    }
+}

@@ -12,6 +12,22 @@ import { MapComponent } from './map/map.component';
 import { FooterComponent } from './footer/footer.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AllFeatureComponent } from './all-feature/all-feature.component';
+import { HomeComponent } from './home/home.component';
+import { AllFeatureListComponent } from './all-feature-list/all-feature-list.component';
+import { DetailFeatureComponent } from './detail-feature/detail-feature.component';
+import { AllWorksComponent } from './all-works/all-works.component';
+import { AllWorksListComponent } from './all-works-list/all-works-list.component';
+import { SwiperModule } from 'swiper/angular';
+import { SliceKitPipe } from './slice-kit.pipe';
+import { DetailPostComponent } from './detail-post/detail-post.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 
 
 @NgModule({
@@ -24,13 +40,28 @@ import { HttpClientModule } from '@angular/common/http';
     BlogComponent,
     MapComponent,
     FooterComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    AllFeatureComponent,
+    HomeComponent,
+    AllFeatureListComponent,
+    DetailFeatureComponent,
+    AllWorksComponent,
+    AllWorksListComponent,
+    SliceKitPipe,
+    DetailPostComponent,
+    BlogListComponent,
+    PaginationComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    SwiperModule,
+    NgbPaginationModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

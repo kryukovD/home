@@ -1,11 +1,10 @@
 @import '../../theme.scss';
 .section-main{
-    padding-top: 58px;
+    padding-top: 190px;
     padding-bottom: 190px;
     position: relative;
-    background-color: $grey;
+    background: $grey;
 
- 
 }
 .text-slider{
     font-size: 32px;
@@ -19,7 +18,6 @@
     }
 }
 .slider{
-    padding-top: 77px;
     max-width: 410px;
 }
 .wrap-slider{
@@ -32,4 +30,7 @@
 .description-slider{
     margin-bottom: 48px;
 }
-
+.activeSection{
+    position: relative;
+    background: $grey;
+}

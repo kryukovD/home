@@ -1,5 +1,5 @@
-<div class="map-container">
-    <div id="map" >   
+<div class="map-container" id="contacts">
+    <div id="map">
     </div>
     <div class="form-wrap col-12 col-md-8 col-xl-6 m-auto">
         <h1 class="text-center">Контакты</h1>
@@ -7,21 +7,48 @@
             <p>Республика Карелия, г.Петрозаводск , ул.Коммунальная д 1</p>
             <p>dimjson5430@gmail.com</p>
         </div>
-        
-        <form class="">
-            <div class="input-wrap d-flex">
-                <input class="flex-grow-1 " placeholder="Имя" type="text" name="name">
-                <input class="flex-grow-1" placeholder="Email"      type="email" name="email">
+
+        <form id="formRequest" [formGroup]="formRequest">
+            <div class="d-flex flex-column flex-sm-row">
+                <div class="input-wrap flex-grow-1">
+                    <div class="errors"
+                        *ngIf="formRequest.get('name')!.errors?.['required'] && (formRequest.get('name')!.touched || formRequest.get('name')!.dirty )">
+                        *Заполните поле
+                    </div>
+                    <div class="errors"
+                        *ngIf="formRequest.get('name')!.errors?.['minlength'] && (formRequest.get('name')!.touched || formRequest.get('name')!.dirty) ">
+                        *Мин длина 3 символа
+                    </div>
+                    <div class="input-wrap d-flex flex-grow-1 left">
+                        <input class="flex-grow-1 " placeholder="Имя" type="text" name="name" formControlName="name">
+                    </div>
+
+                </div>
+                <div class="divide"></div>
+                <div class="input-wrap d-flex flex-grow-1 right">
+                    <div class="errors"
+                    *ngIf="((formRequest.get('email')!.errors?.['required'] && (formRequest.get('email')!.touched || formRequest.get('email')!.dirty))  && (!formRequest.get('email')!.errors?.['minlength']) )">
+                    *Заполните поле
+                </div>
+                <div class="errors"
+                    *ngIf="formRequest.get('email')!.errors?.['email'] && (formRequest.get('email')!.touched || formRequest.get('email')!.dirty) ">
+                    *Некорретный email
+                </div>
+                    <input class="flex-grow-1 " placeholder="Email" type="email" name="email" formControlName="email">
+                </div>
             </div>
-            <div class="input-wrap d-flex ">
-                <textarea placeholder="Сообщение" class="flex-grow-1" name="" id="" cols="30" rows="5"></textarea>
+            <div class="input-wrap d-flex flex ">
+                <div class="errors"
+                *ngIf="((formRequest.get('message')!.errors?.['required'] && (formRequest.get('message')!.touched || formRequest.get('message')!.dirty)) )">
+                *Заполните поле
+            </div>
+                <textarea placeholder="Сообщение" class="flex-grow-1" name="" id="" cols="30" rows="5"
+                    formControlName="message"></textarea>
             </div>
             <div class="d-flex wrap-send-form justify-content-center">
-            <i class="bi bi-envelope-plus send-form "></i>
-           </div>
-            
+                <i class="bi bi-envelope-plus send-form " id="submitIcon" (click)="sendForm()"></i>
+            </div>
+
         </form>
     </div>
 </div>
-
-

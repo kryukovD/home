@@ -34,10 +34,12 @@
         
     }
     .input-wrap {
+       position: relative;
+       
         input{
             border: 1px solid rgba(255,255,255,0.6);
             outline: none;
-            background: $red;
+            background: transparent;
             padding-left: 18px;
             color: #ffffff;
         }
@@ -46,16 +48,15 @@
             background: $red;
             border: 1px solid rgba(255,255,255,0.6);
             padding-left: 18px;
+            padding-top: 10px;
             height: 122px;
             color: #ffffff;
         }
         input:first-child{
-            margin-right: 8px;
             margin-bottom: 17px;
             height: 44px;
         }
         input:last-child{
-            margin-left: 8px;
             margin-bottom: 17px;
             height: 44px;
         }
@@ -72,4 +73,34 @@
     .wrap-send-form{
         padding-top: 25px;
     }
+}
+.errors{
+    display: flex;
+}
+.divide{
+    width: 16px;
+}
+
+.errors{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: $orange;
+    z-index: 1000;
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 13px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-text-fill-color: #FFFFFF;
+-webkit-box-shadow: 0 0 0px 1000px $red inset;
+transition: background-color 5000s ease-in-out 0s;
 }

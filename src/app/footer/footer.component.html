@@ -6,12 +6,11 @@
     <div class="line">
     <div class="footer-top  col-md-6 m-auto">
         <ul class="d-flex ">
-            <li class="m-auto"><a href="javascript:void(0)">Главная</a></li>
-            <li class="m-auto"><a href="javascript:void(0)">Стек</a></li>
-            <li class="m-auto"><a href="javascript:void(0)">Магазин</a></li>
-            <li class="m-auto"><a href="javascript:void(0)">Блог</a></li>
-            <li class="m-auto"><a href="javascript:void(0)">Работы</a></li>
-            <li class="m-auto"><a href="javascript:void(0)">Контакты</a></li>
+            <li class="m-auto"><a (click)="scrollToBlock($event)" data-id="main">Главная</a></li>
+            <li class="m-auto"><a (click)="scrollToBlock($event)" data-id="feature">Стек</a></li>
+            <li class="m-auto"><a  (click)="scrollToBlock($event)" data-id="blog">Блог</a></li>
+            <li class="m-auto"><a (click)="scrollToBlock($event)" data-id="works">Работы</a></li>
+            <li class="m-auto"><a (click)="scrollToBlock($event)" data-id="contacts">Контакты</a></li>
         </ul>
     </div>
   </div>

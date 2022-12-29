@@ -1,4 +1,4 @@
-<section class="section-portfolio">
+<section class="section-portfolio yellow_line" id="works" >
     <div class="section-portfolio_title">
         <div class=" wrap-portfolio_title text-center">
             <h1 class="title-works">Последние <span class="works-bold"> работы </span>
@@ -14,27 +14,19 @@
         </h1>
         </div>
     </div>
-    <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" [interval]="0"  #carouselPortfolio>
-        <ng-template ngbSlide>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="d-flex flex-column">
-                        <img  src="/assets/images/portfolio/jungle-site.jpg"  data-url="https://kareliagroup.com" (click)="openModal(modalImages,$event)" >
+        <div>
+         <swiper #swiper  [config]="configSlider">
+         <ng-template swiperSlide *ngFor="let item of works" >
+                    <div class="d-flex flex-column col-portfolio">
+                        <img  src="{{cfg.server + item.src}}"  [attr.data-url]="item.link" (click)="openModal(modalImages,$event)" >
                      </div>
-                </div>
-            </div>
         </ng-template>
+        </swiper>
+        <div class="view_all"> <a routerLink="/works/all"> <span > Смотреть все <i class="bi bi-eye"></i> </span> </a> </div>
+       </div>
+        
 
-        <ng-template ngbSlide>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="d-flex flex-column">
-                        <p>Раздел пока пуст</p>
-                     </div>
-                </div>
-            </div>
-        </ng-template>
-    </ngb-carousel>
+  
 </section>
 <ng-template #modalImages let-modal>
     <div class="modal-header">

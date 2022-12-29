@@ -1,0 +1,17 @@
+@import '../../theme.scss';
+.all_works_list{
+    h1{
+        margin-bottom: 72px;
+    }
+    background: $red;
+    text-align: center;
+    padding: 75px 0px;
+    .all_work_list__item:hover{
+        cursor: pointer;
+    }
+
+}
+.col-portfolio{
+    border: 1px solid $orange;
+    border-radius: 4px;
+}

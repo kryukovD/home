@@ -1,0 +1,20 @@
+@import '../../theme.scss';
+.sectionNotFound{
+    background: $red;
+    padding: 140px 0px 75px;
+    text-align: center;
+    h1{
+        margin-bottom: 72px;
+    }
+    a{
+        text-decoration: underline;
+        font-size: 16px;
+        color:$default;
+        &:hover{
+            color:$orange;
+        }
+    }
+  
+  
+   
+}

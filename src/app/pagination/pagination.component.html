@@ -1,0 +1,7 @@
+<div class="pagination">
+    <ul>
+        <li *ngFor="let item of pagesArray;index as i" [class]="i+1==currentPage?'active':''" (click)="setPage(i+1)">
+            {{i +1 }}
+        </li>
+    </ul>
+</div>

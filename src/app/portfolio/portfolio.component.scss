@@ -1,5 +1,6 @@
 @import '../../theme.scss';
 .section-portfolio{
+    position: relative;
     background-color: $grey;
     padding-bottom: 78px;
     .wrap-portfolio_title{
@@ -44,5 +45,18 @@
     font-size: 30px;
     &:hover{
         cursor: pointer;
+    }
+}
+.col-portfolio{
+    border: 1px solid $orange;
+    border-radius: 4px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+@media (min-width:0px) and (max-width:645px){
+    .arrows-portfolio{
+        right: 15px !important;
+        top:-15px !important;
     }
 }

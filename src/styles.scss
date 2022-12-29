@@ -69,6 +69,21 @@ h1{
     font-size: 35px;
     line-height: 39px;
 }
+h2{
+    color: $orange;
+}
+article {
+    color: #ffffff;
+    font-size: 16px;
+     li:before{
+        content: "\F26E";
+        font-family: "bootstrap-icons";
+        color: $orange;
+        position: relative;
+        bottom: -2px;
+    }
+}
+
 .section-main .carousel-indicators{
     justify-content: flex-start;
     margin-left: 0px;
@@ -96,6 +111,67 @@ h1{
 .wrapper{
     position: relative;
 }
+.yellow_line::after{
+    content: "";
+    display: block;
+    height: 9px;
+    width: 88px;
+    background: #fac81b;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.responseFormMessage{
+    color: $orange;
+}
+.view_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+   i{
+    position: relative;
+    bottom: -1px;
+   }
+    span{
+        font-size: 20px;
+        line-height: 20px;
+        color: $orange;
+    }
+}
+.i-close{
+    cursor: pointer;
+}
+.pagination{
+    justify-content: center;
+    margin-top: 30px;
+}
+.page-link{
+    border: 1px solid $orange;
+    color:$orange;
+}
+.page-item.active .page-link{
+    background: $orange;
+    background-color: $orange;
+    border-color:unset;
+}
+.page-link:hover{
+    color: unset;
+}
+.page-link:focus{
+    box-shadow: none;
+}
+.text-slider span{
+    color: #f06d6e;
+    font-family: "LatoBold";
+   
+}
+
+
+
+
 
 
 

@@ -1,0 +1,10 @@
+<div class="wrapper" data-spy="scroll" data-target="#header">
+<app-mobile-menu ></app-mobile-menu>
+<app-header ></app-header>
+<app-section-main (onChange)="toggleMenu()" (onLoaded)="increasedBlock($event)"></app-section-main>
+<app-feature (onLoaded)="increasedBlock($event)"> </app-feature>
+<app-portfolio (onLoaded)="increasedBlock($event)"></app-portfolio> 
+<app-blog (onLoaded)="increasedBlock($event)"></app-blog>
+<app-map></app-map>
+<app-footer></app-footer>
+</div>

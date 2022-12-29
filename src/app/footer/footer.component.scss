@@ -6,7 +6,11 @@ footer{
     font-size: 13px;
     li{
         padding: 17px 5px;
-        color: #b1b1b1;
+        color: $default;
+    }
+    a:hover{
+        cursor: pointer;
+        color: $orange;
     }
 }
 .line{

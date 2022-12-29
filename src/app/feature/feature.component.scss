@@ -1,5 +1,6 @@
 @import "../../theme.scss";
 .section-feature{
+    position: relative;
     h1{
         margin-bottom: 72px;
     }
@@ -27,19 +28,27 @@
     }
     .item__content{
         color:#ffffff;
-        .title-content{
-            display: block;
-            color: #ffffff;
-            font-size: 22px;
-            margin: 35px 0px 32px;
-        }
         .content__desc{
             height: 63px;
             overflow: hidden;
             margin-bottom: 40px;
         }
     }
+    .title-content{
+        display: block;
+        color: #ffffff;
+        font-size: 22px;
+        margin: 35px 0px 32px;
+    }
 }
 .active{
     color: $orange !important ;
 }
+@media (min-width:0) and (max-width:768px){
+    .item{
+        margin-top: 30px;
+    }
+}
+
+
+

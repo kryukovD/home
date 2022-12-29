@@ -1,0 +1,13 @@
+<app-mobile-menu ></app-mobile-menu>
+<app-header></app-header>
+<app-section-main ></app-section-main>
+   <section class="detail_feature" id="detail_feature">
+        <div class="container">
+            <h1 *ngIf="article"> {{article.title}} <i class="{{article.class}}"> </i></h1>  
+           <article *ngIf="article" [innerHtml]="article.detail.text">
+               
+           </article>
+        </div>
+   </section>
+<app-map></app-map>
+<app-footer></app-footer>

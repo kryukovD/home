@@ -3,6 +3,9 @@
     flex-basis: 555px;
 }
 .wrap-header-navigation ul{
+    .active{
+        background: $orange;
+    }
     height: 100%;
     li{
         height: 100%;
@@ -13,6 +16,7 @@
         text-transform: capitalize;
         padding: 0px 20px;
         position: relative;
+        cursor: pointer;
         &:hover{  
             &:after{
             content: "";
@@ -27,8 +31,12 @@
     }
 }
 header{
-    background: rgba(0,0,0,0.76);
-    height: 76px;
+    background: #3d3d39;
+    opacity: 1;
+    z-index: 1000;
+    height: 85px;
+    position: fixed;
+    width: 100%;
     .text-logo {
         font-size: 32px;
         line-height: 39px;
@@ -43,7 +51,23 @@ header{
     .mobile-menu{
         color: #ffffff;
         font-size: 20px;
+        &:hover{
+            cursor: pointer;
+        }
         
     }
  
+}
+.scrollingHeader{
+    animation: headerAnimate 0.7s ease;
+   
+}
+@keyframes headerAnimate {
+    0%{
+        transform: translateY(-100%);  
+    }  
+   
+    100%{
+        transform: translateY(0%); 
+    }
 }

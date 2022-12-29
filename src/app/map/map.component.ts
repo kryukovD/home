@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
+import {Validators} from "@angular/forms"
+import { RequestFormService } from '../request-form.service';
 declare var ymaps:any;
 @Component({
   selector: 'app-map',
@@ -6,7 +9,12 @@ declare var ymaps:any;
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  constructor() { }
+  formRequest=new FormGroup({
+    name: new FormControl(null,[Validators.required,Validators.minLength(3)]),
+    email: new FormControl(null,[Validators.required,Validators.email]),
+    message: new FormControl(null,[Validators.required])
+  })
+  constructor(private formRequestService:RequestFormService) { }
 
   ngOnInit(): void {
     ymaps.ready().then(() => {
@@ -28,6 +36,21 @@ export class MapComponent implements OnInit {
     myMap.behaviors.disable('scrollZoom');
     });
     
+  } 
+
+  sendForm(){
+  
+    if( (this.formRequest.get("name")!.errors===null) && (this.formRequest.get("email")!.errors===null) && (this.formRequest.get("message")!.errors===null) ){
+      this.formRequestService.sendFormToServer(this.formRequest.value).subscribe((response:any)=>{
+        document.getElementsByClassName("wrap-send-form")[0].innerHTML=`<p class="responseFormMessage"> ${response.message} </p>`
+      })
+    }
+    else{
+      this.formRequest.get("name")?.markAsDirty()
+      this.formRequest.get("email")?.markAsDirty()
+      this.formRequest.get("message")?.markAsDirty()
+    }
+
   }
  
 

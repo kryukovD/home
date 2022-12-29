@@ -1,0 +1,28 @@
+<section id="all_works" class="all_works_list">
+
+    <h1 id="all_works_title"> Все работы</h1>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3 mt-2 all_work_list__item" *ngFor="let item of sliceData ">
+            <div class="d-flex flex-column col-portfolio">
+                <img src="{{cfg.server + item.src}}" [attr.data-url]="item.link"
+                    (click)="openModal(modalImages,$event)">
+            </div>
+        </div>
+    </div>
+
+
+    <ngb-pagination [collectionSize]="countItems" [size]="'sm'" [pageSize]="pageSize" (pageChange)="pageChanged($event)"></ngb-pagination>
+</section>
+<ng-template #modalImages let-modal>
+    <div class="modal-header">
+        <h4 class="text-center" id="modal-basic-title">{{url}}</h4>
+        <i class="bi bi-x-lg i-close" (click)="modal.close()"></i>
+    </div>
+    <div class="modal-body">
+        <img src="{{clickedImage}}" class="modalImagePortfolios">
+    </div>
+    <div class="modal-footer">
+        <a type="button" href="{{url}}" class="btn-site">Перейти</a>
+    </div>
+</ng-template>

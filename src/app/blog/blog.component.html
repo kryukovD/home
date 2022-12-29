@@ -1,67 +1,31 @@
-<section class="section-blog">
-    <div class="container"> 
+<section class="section-blog yellow_line" id="blog" >
+    <div class="container">
         <h1 class="text-center">Посты</h1>
-         <div class="row row-posts">
-            <div class=" col-md-4">
+        <div class="row row-posts">
+
+            <div class=" col-md-4 col-lg-6 col-xl-4 col-post" *ngFor="let item of postService.posts | slice:0:countItems;index as i"  routerLink="/article/{{item!.id}}">
                 <div class="post">
+                    <p class="title_post">{{item.title | sliceKit :30}}</p>
                     <div class="wrap-image">
-                        <img src="assets/images/back_post.png">
+                        <img src="{{cfg?.server+item!.image}}">
                     </div>
                     <div class="author_post">
-                        <img src="assets/images/person.png">
+                        <img src="{{cfg?.server+item!.person_image}}">
                     </div>
                     <div class="date-block">
-                        <span class="date"> January 11, 2014 </span>
+                        <span class="date"> {{item.date | date}}</span>
                     </div>
 
                     <div class="description-block text-center">
-                        <p> Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing. Aliquam viverra   dolor sit consectetur.  
+                        <p>{{item.desc | sliceKit:90}}
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class=" col-md-4">
-                <div class="post">
-                    <div class="wrap-image">
-                        <img src="assets/images/back_post.png">
-                    </div>
-                    <div class="author_post">
-                        <img src="assets/images/person.png">
-                    </div>
-                    <div class="date-block">
-                        <span class="date"> January 11, 2014 </span>
-                    </div>
+    
 
-                    <div class="description-block text-center">
-                        <p> Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing. Aliquam viverra   dolor sit consectetur.  
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" col-md-4">
-                <div class="post">
-                    <div class="wrap-image">
-                        <img src="assets/images/back_post.png">
-                    </div>
-                    <div class="author_post">
-                        <img src="assets/images/person.png">
-                    </div>
-                    <div class="date-block">
-                        <span class="date"> January 11, 2014 </span>
-                    </div>
-
-                    <div class="description-block text-center">
-                        <p> Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing. Aliquam viverra   dolor sit consectetur.  
-                        </p>
-                    </div>
-                </div>
-            </div>
-         </div>
-
+        </div>
+        <div class="view_all"> <a routerLink="article/all"> <span > Смотреть все <i class="bi bi-eye"></i> </span> </a> </div>
     </div>
 </section>
